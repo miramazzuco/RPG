@@ -62,6 +62,10 @@ namespace Rpg.Controllers
 
             //COM EXPRESSÃO TERNÁRIA
             //novo.Id = novo.Id == 0 ? personagens[personagens.Count - 1].Id + 1 : novo.Id;
+            
+            if(personagens.Count == 0){
+                novo.Id = 1;
+            }
 
             personagens.Add(novo);
             return Ok(personagens);
